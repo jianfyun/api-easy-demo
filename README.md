@@ -1,12 +1,15 @@
 # api-easy-demo
 
-## Installation
-    composer install api-easy-demo
+## Introduction
+This is a simple demo for api-easy which is a simple, lightweight RESTful API framework for PHP. (https://github.com/jianfyun/api-easy).
     
 ## Requirements
 * HTTP Server (Example: Nginx)
 * PHP5.5+
 * Composer
+
+## Installation
+    composer install api-easy-demo
     
 ## Autoload
     composer dump-autoload --optimize
