@@ -18,7 +18,7 @@ try {
 
     $api->delete('/demo/user/{id}', ['DemoController', 'deleteUser']);
 
-    $api->options('/demo', function(Request $request, Response $response) {
+    $api->options('*', function(Request $request, Response $response) {
         $response->withHeader('Allow', 'GET,POST,PUT,DELETE,OPTIONS');
     });
 
