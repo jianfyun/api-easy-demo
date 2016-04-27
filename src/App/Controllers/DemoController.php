@@ -25,13 +25,15 @@ class DemoController implements ControllerInterface
 
     public function createUser(Request $request, Response $response)
     {
-        $response->withJson(['id' => 'user id, example: 1234']);
+        $name = $request->getParsedBody()['name'];
+        $response->withJson(['id' => 'user id, example: 1234', 'name' => $name]);
     }
 
     public function updateUser(Request $request, Response $response)
     {
         $id = $request->getAttribute('id');
-        $response->withJson(['id' => $id, 'updated' => 1]);
+        $name = $request->getParsedBody()['name'];
+        $response->withJson(['id' => $id, 'name' => $name, 'updated' => 1]);
     }
 
     public function deleteUser(Request $request, Response $response)
