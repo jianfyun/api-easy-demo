@@ -29,7 +29,7 @@ curl -i -X GET http://your-api-domain/demo/user/123
     {"id":"123","age":24,"weight":80,"height":180}
 
 ### HTTP POST (Create user)
-curl -i -X POST -d "name=jim&age=15" http://your-api-domain/demo/user
+curl -i -X POST -H "Content-Type: application/json" -d '{"name":"Jim","age":18}' http://your-api-domain/demo/user
 
     HTTP/1.1 200 OK
     Server: nginx/1.2.9
@@ -38,10 +38,10 @@ curl -i -X POST -d "name=jim&age=15" http://your-api-domain/demo/user
     Transfer-Encoding: chunked
     Connection: close
     
-    {"id":"user id, example: 1234"}
+    {"id":"user id, example: 1234","name":"Jim"}
 
 ### HTTP PUT (Update user)
-curl -i -X PUT -d "name=jim&age=15" http://your-api-domain/demo/user/1234
+curl -i -X PUT -H "Content-Type: application/json" -d '{"name":"Bob","age":16}' http://your-api-domain/demo/user/1234
 
     HTTP/1.1 200 OK
     Server: nginx/1.2.9
@@ -50,7 +50,7 @@ curl -i -X PUT -d "name=jim&age=15" http://your-api-domain/demo/user/1234
     Transfer-Encoding: chunked
     Connection: close
     
-    {"id":"1234","updated":1}
+    {"id":"1234","name":"Bob","updated":1}
 
 ### HTTP DELETE (Delete user)
 curl -i -X DELETE http://your-api-domain/demo/user/1234
