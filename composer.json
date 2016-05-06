@@ -2,12 +2,12 @@
     "name": "api-easy/api-easy-demo",
     "description": "Demo of api-easy framwork",
     "keywords": ["api-easy", "API", "REST", "framwork"],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "type": "project",
     "require": {
         "php": ">=5.5",
         "ext-SPL": "*",
-        "api-easy/api-easy": ">=0.1.11"
+        "api-easy/api-easy": ">=0.1.23"
     },
     "require-dev": {
         "phpunit/phpunit": ">=4.5.0"
